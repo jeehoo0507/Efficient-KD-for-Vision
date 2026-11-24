@@ -2,10 +2,10 @@
 
 ## 랩미팅 발표 자료
 
-교사 연산을 줄인 만큼 실제 학습 시간도 줄어드는가? 비슷한 시간에 학습한 모델을 평균 정확도와 최저 그룹 정확도로 비교하면 같은 결론에 이르는가? 이번 랩미팅에서는 원고가 이 두 질문을 어떤 순서로 제기하는지, 각 실험표가 어느 질문에 답하는지, 초록에 어떤 근거를 남길지 검토한다.
+작은 학생 모델을 만드는 데 드는 학습 비용에서 출발했다. 교사를 덜 실행하면 그만큼 시간이 줄어들까? 비용 일부가 선택·사전 계산·저장으로 옮겨가거나, 평균 정확도에 가려진 그룹에서 손실이 생길 수도 있다. 이 두 가능성을 세 질문으로 나누어 조사했다.
 
-[16장 PPT 다운로드](presentations/vision-kd-seminar/EKD-seminar.pptx) · [슬라이드별 샘플·결과표·설명](presentations/vision-kd-seminar/README.md)
+[16장 PowerPoint](presentations/vision-kd-seminar/EKD-seminar.pptx) · [페이지별 샘플과 설명](presentations/vision-kd-seminar/README.md) · [원고 그림 1–4와 표 1–6](presentations/vision-kd-seminar/originals/README.md)
 
-- [논문 구상과 문헌 근거 (3–6쪽)](presentations/vision-kd-seminar/README.md#paper) — TinyViT 사례에서 비용 범위를 정의하고, 네 가지 기법의 차이와 40편의 보고 현황을 살펴본다.
-- [실험 설계와 결과 (7–14쪽)](presentations/vision-kd-seminar/README.md#tests) — 대조군을 고른 이유를 먼저 보고, 비용 범위별 결과와 세 데이터셋의 정확도를 비교한다. 예산·캐시·데이터 선택·규모 대조로 해석을 좁힌다.
-- [원고에 남길 주장과 논의 (15–16쪽)](presentations/vision-kd-seminar/README.md#decisions) — 두 질문에 직접 답하는 결과와 적용 범위를 보강하는 대조를 구분해 초록·결과·논의의 배치안을 검토한다.
+- [Ⅰ. 논문 구상과 문헌 근거](presentations/vision-kd-seminar/README.md#paper)　한 스텝의 연산을 분해한 뒤, 같은 교사 호출을 줄여도 학생이 받는 신호가 어떻게 다른지 살펴본다. 이 틀을 문헌 40편에 적용해 직접 비교가 필요한 지점을 찾는다.
+- [Ⅱ. 실험 설계와 결과](presentations/vision-kd-seminar/README.md#tests)　세 데이터셋에서 네 축을 비교하고 CelebA에서 두 축을 추가 점검했다. 100에폭 Full KD로 비용 절감률을 구하고, 60·70에폭 Full KD로 비슷한 시간에서 얻는 정확도를 비교한다.
+- [Ⅲ. 세 질문의 답과 논의](presentations/vision-kd-seminar/README.md#decisions)　관찰한 비용 이동과 성능 차이를 근거로 각 기법에 필요한 보고 항목을 제안한다. 문헌 40편과 직접 시험한 모델·데이터가 결론의 적용 범위다.
